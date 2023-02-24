@@ -9,6 +9,7 @@ import { createApp } from 'vue';
 import {createRouter,createWebHashHistory} from 'vue-router';
 import table from './components/table.vue';
 import AddDisp from './components/AddDisp.vue';
+import View from './components/View.vue';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -19,6 +20,8 @@ import AddDisp from './components/AddDisp.vue';
 const rotas = [
     { path: '/', component: table },
     { path: '/add', component: AddDisp },
+    { path: '/view', component: View },
+    { path: '/edit', component: View },
   ]
 
   const roteador = createRouter({

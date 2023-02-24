@@ -53,4 +53,15 @@ class DespesasController extends Controller
         return DespesaResource::make($delete);
     }
 
+    public function update(Request $request,$id){
+
+        $despesa = Despesas::find($id);
+        $despesa->valor = $request->valor;
+        $despesa->descricao  = $request->desc;
+        $despesa->data =  $request->data;            
+        $despesa->save();
+
+        return DespesaResource::make($despesa);
+    }
+
 }
